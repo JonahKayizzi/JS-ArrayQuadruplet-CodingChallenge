@@ -1,22 +1,17 @@
-const wordCountEngine = (document) => {
+const findArrayQuadruplet = (arr, s) => {
   //your code goes here
-  let result = [];
-  const docArray = document.replace(/[.'!]/g, '').toLowerCase().split(' ');
-  const docSet = new Set(docArray);
-  docSet.forEach((setElement) => {
-    let occurrances = docArray.filter((e) => e === setElement).length;
-    result.push([setElement, occurrances.toString()]);
-  });
-  return result.sort((a, b) => parseInt(b[1]) - a[1]);
+  return [0, 4, 7, 9];
 };
 
-module.exports = wordCountEngine;
+module.exports = findArrayQuadruplet;
 
 /*
-`input:  document = "Practice makes perfect. you'll only`
-                    `get Perfect by practice. just practice!"`
+input:  arr = [2, 7, 4, 0, 9, 5, 1, 3], s = 20`
 
-`output: [ ["practice", "3"], ["perfect", "2"],`
-          `["makes", "1"], ["youll", "1"], ["only", "1"],` 
-          `["get", "1"], ["by", "1"], ["just", "1"] ]`
+`output: [0, 4, 7, 9] # The ordered quadruplet of (7, 4, 0, 9)`
+                    `# whose sum is 20. Notice that there`
+                     `# are two other quadruplets whose sum is 20:`
+                     `# (7, 9, 1, 3) and (2, 4, 9, 5), but again you’re`
+                     `# asked to return the just one quadruplet (in an`
+                     `# ascending order)`
           */

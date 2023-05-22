@@ -3,7 +3,7 @@
 
 <div align="center">
 
-  <h3><b>WORD COUNT ENGINE CODING CHALLENGE</b></h3>
+  <h3><b>ARRAY QUADRUPLET CODING CHALLENGE</b></h3>
 
 </div>
 
@@ -12,7 +12,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 WORD COUNT ENGINE ](#-word-count-engine-)
+- [📖 ARRAY QUADRUPLET ](#-array-quadruplet-)
   - [🛠 The Challenge ](#-the-challenge-)
     - [Tech Stack ](#tech-stack-)
   - [💻 Getting Started ](#-getting-started-)
@@ -27,31 +27,35 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 WORD COUNT ENGINE <a name="about-project"></a>
+# 📖 ARRAY QUADRUPLET <a name="about-project"></a>
 
 
-**WORD COUNT ENGINE** is a medium difficulty coding challenge that I found on PRAMP. Test your profficiency with strings and arrays.
+**ARRAY QUADRUPLET** is another medium difficulty coding challenge that I found on PRAMP.
 
 ## 🛠 The Challenge <a name="built-with"></a>
-Implement a document scanning function `wordCountEngine` which receives a string `document` and returns a list of all unique words in it and their number of occurrences, sorted by the number of occurrences in a descending order. If two or more words have the same count, they should be sorted according to their order in the original sentence. Assume that all letters are in english alphabet. You function should be case-insensitive, so for instance, the words `“Perfect”` and `“perfect”` should be considered the same word.
-The engine should strip out punctuation (even in the middle of a word) and use whitespaces to separate words.
+Given an unsorted array of integers `arr` and a number `s`, write a function `findArrayQuadruplet` that finds four numbers (quadruplet) in `arr` that sum up to `s`. Your function should return an array of these numbers in an ascending order. If such a quadruplet doesn’t exist, return an empty array.
 
-Analyze the time and space complexities of your solution. Try to optimize for time while keeping a polynomial space complexity.
+Note that there may be more than one quadruplet in `arr` whose sum is `s`. You’re asked to return the first one you encounter (considering the results are sorted).
+
+Explain and code the most efficient solution possible, and analyze its time and space complexities.
+
 **Examples:**
-`input:  document = "Practice makes perfect. you'll only`
-                    `get Perfect by practice. just practice!"`
+`input:  arr = [2, 7, 4, 0, 9, 5, 1, 3], s = 20`
 
-`output: [ ["practice", "3"], ["perfect", "2"],`
-          `["makes", "1"], ["youll", "1"], ["only", "1"],` 
-          `["get", "1"], ["by", "1"], ["just", "1"] ]`
-
-**Important:** please convert the occurrence integers in the output list to strings (e.g. "3" instead of 3). We ask this because in compiled languages such as C#, Java, C++, C etc., it’s not straightforward to create mixed-type arrays (as it is, for instance, in scripted languages like JavaScript, Python, Ruby etc.). The expected output will simply be an array of string arrays.
+`output: [0, 4, 7, 9] # The ordered quadruplet of (7, 4, 0, 9)`
+                    `# whose sum is 20. Notice that there`
+                     `# are two other quadruplets whose sum is 20:`
+                     `# (7, 9, 1, 3) and (2, 4, 9, 5), but again you’re`
+                     `# asked to return the just one quadruplet (in an`
+                     `# ascending order)`
 
 **Constraints:**
 
 **[time limit] 5000ms**
-**[input] string document**
-**[output] array.array.string**
+**[input] array.integer arr**
+**1 ≤ arr.length ≤ 100**
+**[input] integer s**
+**[output] array.integer**
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -86,8 +90,8 @@ Clone this repository to your desired folder:
 
 
 ```sh
-  cd JavaScript-WordCountEngine-CodingChallenge
-  git clone https://github.com/JonahKayizzi/JavaScript-WordCountEngine-CodingChallenge.git
+  cd JS-ArrayQuadruplet-CodingChallenge
+  git clone https://github.com/JonahKayizzi/JS-ArrayQuadruplet-CodingChallenge.git
 ```
 
 
@@ -128,7 +132,7 @@ Submit a pull_request and ensure that all auto_checks pass
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/JonahKayizzi/JavaScript-WordCountEngine-CodingChallenge/issues).
+Feel free to check the [issues page](https://github.com/JonahKayizzi/JS-ArrayQuadruplet-CodingChallenge/issues).
 
 Contribute my providing more optimal approaches with better performance and time complexity
 

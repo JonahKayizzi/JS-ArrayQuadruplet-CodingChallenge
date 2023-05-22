@@ -1,22 +1,13 @@
-const wordCountEngine = require('./challenge');
+const findArrayQuadruplet = require('./challenge');
 const assert = require('assert');
 
 // eslint-disable-next-line no-undef
-describe('count number of words in document', function () {
+describe('return first array of numbers in arr summing up to s', function () {
   // eslint-disable-next-line no-undef
-  it('it should return [ ["practice", "3"], ["perfect", "2"], ["makes", "1"], ["youll", "1"], ["only", "1"], ["get", "1"], ["by", "1"], ["just", "1"] ]', function () {
-    const sampleDocument =
-      "Practice makes perfect. you'll only get Perfect by practice. just practice!";
-    const result = [
-      ['practice', '3'],
-      ['perfect', '2'],
-      ['makes', '1'],
-      ['youll', '1'],
-      ['only', '1'],
-      ['get', '1'],
-      ['by', '1'],
-      ['just', '1'],
-    ];
-    assert.deepStrictEqual(wordCountEngine(sampleDocument), result);
+  it('it should return []', function () {
+    const givenArray = [2, 7, 4, 0, 9, 5, 1, 3];
+    const sum = 20;
+    const result = [0, 4, 7, 9];
+    assert.equal(findArrayQuadruplet(givenArray, sum), result);
   });
 });

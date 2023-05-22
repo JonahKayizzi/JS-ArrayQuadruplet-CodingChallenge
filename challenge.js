@@ -1,6 +1,29 @@
 const findArrayQuadruplet = (arr, s) => {
   //your code goes here
-  return [0, 4, 7, 9];
+  const sortedArray = arr.sort((a, b) => a - b);
+  for (let i = 0; i < sortedArray.length; i++) {
+    for (let j = i + 1; j < sortedArray.length; j++) {
+      for (let k = j + 1; k < sortedArray.length; k++) {
+        for (let l = k + 1; l < sortedArray.length; l++) {
+          if (
+            sortedArray[i] +
+              sortedArray[j] +
+              sortedArray[k] +
+              sortedArray[l] ===
+            s
+          ) {
+            return [
+              sortedArray[i],
+              sortedArray[j],
+              sortedArray[k],
+              sortedArray[l],
+            ].sort((a, b) => a - b);
+          }
+        }
+      }
+    }
+  }
+  return [];
 };
 
 module.exports = findArrayQuadruplet;
